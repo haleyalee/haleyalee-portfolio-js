@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>experience — haleyalee</title>
+  <link rel="stylesheet" type="text/css" href="styles/site.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="scripts/jquery-3.5.1.js" type="text/javascript"></script>
+  <!-- <script src="scripts/validation.js" type="text/javascript" async></script> -->
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="index.html"><img src="images/haleyalee.png" alt="haleyalee"></a>
+    <nav id="menu">
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="portfolio.html">portfolio</a></li>
+        <li><a class="current-page" href="experience.html">experience</a></li>
+        <li><a href="about.html">about</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Experience -->
+  <main>
+    <div id="experience">
+      <h3><span class="hl">Work Experience</span></h3>
+
+      <!-- CACI -->
+      <div class="work row">
+        <div class="content">
+          <img src="images/caci.jpg" alt="CACI" width=530px height=330px>
+        </div>
+        <div class="content column">
+          <div class="work-title">
+            <h2>Digital Signal Processing Intern</h2>
+            <h4><a href="https://www.caci.com/">CACI Bit Systems</a>, Summer 2019</h4>
+          </div>
+          <div class="work-details"> 
+            <p>
+              During the summer of 2019, I interned at CACI Bit Systems in Sterling, Virginia. I was one of three interns 
+              on the Navy Digital Signal Processing (DSP) team.
+            </p>
+            <p>
+              CACI Bit Systems utilizes several digitizing receivers that enable the use of DSP algorithms to conduct various 
+              missions. Their most common receivers are incredibly capable but also very expensive. There is a growing market of 
+              highly capable cost-effective radio-frequency (RF) digitizer chips that can enable the implementation of software 
+              defined radios (SDR) on consumer-grade computer hardware. One such SDR is the <span class="hl">Lime-SDR</span>; 
+              a popular, community-backed SDR with a great deal of existing open-source support.
+            </p>
+            <p>
+              Over the course of the summer, my task was to develop the source code in <span class="hl">C++</span> and 
+              <span class="hl">Python</span> to transmit and receive streaming data to and from the Lime-SDR. I integrated 
+              the Lime-SDR with the SoapySDR API and utilized the Lime-SDR within the <span class="h1">X-Midas framework</span>, 
+              using the already existing receiver as a model. Additionally, I designed an interactive GUI in <span class="hl">Qt 
+              Designer</span> that allows the user to tune the parameters of the device in real-time.
+            </p>
+            <p>
+              Ultimately, by the end of my internship, I was able to provide demonstration DSP code that leverages a Lime-SDR and 
+              completely demodulates a digital signal down to bits. This enabled us to compare the relative performance of the 
+              Lime-SDR's hardware with that of comparable receivers. My work showed that the Lime-SDR is an extremely capable receiver 
+              at an attractive cost point. This opens up the potential for new product lines at CACI, such as a "lite" version of 
+              their existing products. It also creates the possibility of desktop receivers for developers, which reduces the overhead 
+              caused by time-sharing of the limited and more expensive receiver.
+            </p>
+          </div>
+        </div>
+      </div> <!-- END CACI -->
+
+      <!-- XXI -->
+      <div class="work row">
+        <div class="content">
+          <img src="images/xxi.png" alt="Forever 21" width=530px height=330px>
+        </div>
+        <div class="content column">
+          <div class="work-title">
+            <h2>Visual Design Associate</h2>
+            <h4><a href="https://www.forever21.com/us/aboutus/aboutus.html">Forever 21</a>, Summer 2018</h4>
+          </div>
+          <div class="work-details"> 
+            <p>
+              I first developed a love for design while working part-time at Forever 21 the summer of 2018. Fashion had always been an
+              interest of mine, and so I took the opportunity to immerse myself within it this summer. As a visual design associate, I was 
+              responsible for curating the product displays: every table, rack, and wall was carefully constructed to display the clothing in 
+              the most visually captivating way. Funnily enough, from this job, I learned the importance of <span class="hl">user-centered design</span>. 
+              Rather than creating outfits that suited my personal style, I had to consider what the current fashion trends were, as well 
+              as what products were the most popular.
+            </p>
+            <p>
+              I became incredibly disciplined this summer, as my workdays were from 6am to 2pm. Because the store opened mid-shift, I would also have
+              to take on the role of sales associate. Through this, I was able to develop my customer service skills, which include patience, good
+              communication, and efficiency. 
+            </p>
+          </div>
+        </div>
+      </div> <!-- END XXI -->
+
+    </div>  
+  </main>
+
+  <footer class="row">
+    <div id="socials" class="row">
+      <img src="images/email.png" alt="Email">
+      <img src="images/facebook.png" alt="Facebook">
+      <img src="images/instagram.png" alt="Instagram">
+      <img src="images/linkedin.png" alt="LinkedIn">
+      <img src="images/github.png" alt="Github">
+    </div>
+
+    <p>website designed and developed by Haley Lee 2020</p>
+
+  </footer>
+</body>
+</html>
