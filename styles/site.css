@@ -8,6 +8,25 @@
 }
 /* END FONTS */
 
+/* BEGIN KEYFRAMES */
+@keyframes fadein {
+  from { opacity: 0}
+  to   { opacity: 1}
+}
+
+@keyframes wave {
+  /* Source: https://jarv.is/notes/css-waving-hand-emoji/ */
+  0% { transform: rotate( 0.0deg) }
+  10% { transform: rotate(14.0deg) }
+  20% { transform: rotate(-8.0deg) }
+  30% { transform: rotate(14.0deg) }
+  40% { transform: rotate(-4.0deg) }
+  50% { transform: rotate(10.0deg) }
+  60% { transform: rotate( 0.0deg) }
+ 100% { transform: rotate( 0.0deg) }
+}
+/* END KEYFRAMEs */
+
 html {
   box-sizing: border-box;
   font-family: 'Nunito', Verdana, Arial, serif;
@@ -19,6 +38,10 @@ html {
 main {
   width: 1200px;
   margin: auto;
+}
+
+.hidden {
+  display: none;
 }
 
 .row {
@@ -42,7 +65,7 @@ p a:hover, h4 a:hover, table a:hover {
   box-shadow: none;
 }
 
-p a, h4 a, table a {
+/* p a, h4 a, table a {
   color: black;
   text-decoration: none;
   background-size: 1px 1em;
@@ -50,6 +73,11 @@ p a, h4 a, table a {
     inset 0 -0.175em white,
     inset 0 -0.2em #000;
   display: inline;
+} */
+
+.arrow a {
+  text-decoration: none;
+  color: black; 
 }
 
 .src {
@@ -62,6 +90,20 @@ p a, h4 a, table a {
 
 .i {
   font-style: italic;
+}
+
+.u {
+  color: black;
+  text-decoration: none;
+  background-size: 1px 1em;
+  box-shadow:
+    inset 0 -0.175em white,
+    inset 0 -0.2em #000;
+  display: inline;
+}
+
+.yellow {
+  background-color: #fceea8;
 }
 
 .hl {
@@ -110,6 +152,7 @@ header {
 .current-page {
   /* background-color: black; */
   /* font-weight: bold; */
+  /* animation: fadein 1s; */
   border-bottom: 1px solid black;
   color: black;
   padding-bottom:1px;
@@ -136,6 +179,12 @@ footer {
 
 #intro-text {
   padding-left: 50px;
+}
+
+#wave {
+  animation: wave 2.5s 1;
+  transform-origin: 70% 70%;
+  display: inline-block;
 }
 
 #intro-text h2 {
@@ -211,6 +260,7 @@ table .col2 {
 }
 
 .work {
+  animation: fadein 1s;
   width: 100%;
   height: auto;
   margin: auto;
@@ -225,6 +275,7 @@ table .col2 {
 
 .work-title h2 {
   margin: 0;
+  padding: 0;
 }
 
 .work-title h4 {
@@ -234,6 +285,29 @@ table .col2 {
   /* background-color: #fceea8; */
 }
 /* END EXPERIENCE.HTML */
+
+/* BEGIN PORTFOLIO.HTML */
+.subsection {
+
+}
+
+.subsection-header {
+
+}
+
+.subsection-content {
+  animation: fadein 1s;
+}
+
+.caret {
+  font-size: 12px;
+  /* transform: scale(1,1); */
+}
+
+.flip {
+  transform: rotate(180deg);
+}
+/* END PORTFOLIO.HTML */
 
 /* mobile */
 @media (max-width: 600px) {
