@@ -12,6 +12,11 @@ $("#sustain-section").addClass("hidden");
   // hide game-section
   // hide sustain-section
 $("#design-caret-hide").on("click", function() {
+
+  $([document.documentElement, document.body]).animate({
+    scrollTop: $("#design-caret-show").offset().top
+  }, 600);
+
   $("#design-caret-show").removeClass("hidden");
   $("#design-caret-hide").addClass("hidden");
   $("#game-caret-show").addClass("hidden");
@@ -36,6 +41,11 @@ $("#design-caret-show").on("click", function() {
   // show game-section
   // hide sustain-section
 $("#game-caret-hide").on("click", function() {
+
+  $([document.documentElement, document.body]).animate({
+    scrollTop: $("#game-caret-show").offset().top
+  }, 600);
+
   $("#design-caret-show").addClass("hidden");
   $("#design-caret-hide").removeClass("hidden");
   $("#game-caret-show").removeClass("hidden");
@@ -59,6 +69,11 @@ $("#game-caret-show").on("click", function() {
   // hide game-section
   // show sustain-section
 $("#sustain-caret-hide").on("click", function() {
+
+  $([document.documentElement, document.body]).animate({
+    scrollTop: $("#sustain-caret-show").offset().top
+  }, 600);
+
   $("#design-caret-show").addClass("hidden");
   $("#design-caret-hide").removeClass("hidden");
   $("#game-caret-show").addClass("hidden");
