@@ -219,7 +219,11 @@ footer {
 
 /* BEGIN INDEX.HTML */
 #introduction {
-  margin-bottom: 60px;
+  margin-bottom: 100px;
+}
+
+#me {
+  animation: fadein 1s;
 }
 
 #intro-text {
