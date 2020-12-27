@@ -47,6 +47,8 @@ html {
 main {
   width: 1200px;
   margin: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .hidden {
@@ -66,10 +68,6 @@ main {
 .shadow {
   box-sizing: border-box;  
   box-shadow: 0px 4px 4px rgba(170, 170, 170, 0.25)
-}
-
-img {
-  border-radius: 5px;
 }
 
 .left-button {
@@ -210,14 +208,18 @@ footer {
   align-items: center;
 }
 
+#socials {
+  display: inline-block;
+}
+
 #socials img {
-  margin-right: 10px;
+  margin-right: 20px;
 }
 /* END FOOTER */
 
 /* BEGIN INDEX.HTML */
 #introduction {
-  margin: 60px 0px;
+  margin-bottom: 60px;
 }
 
 #intro-text {
@@ -284,6 +286,10 @@ hr {
   /* margin: 0px 15px; */
 }
 
+.project img {
+  border-radius: 5px;
+}
+
 .project .content {
   padding: 0px 20px;
 }
@@ -312,10 +318,6 @@ table .col2 {
 /* END INDEX.HTML */
 
 /* BEGIN EXPERIENCE.HTML */
-#experience {
-  padding: 60px 0px;
-}
-
 #experience h3 {
   font-size: 25px;
   padding-bottom: 15px;
@@ -330,6 +332,10 @@ table .col2 {
   border-radius: 5px;
   padding: 40px 20px;
   margin-bottom: 30px;
+}
+
+.work img {
+  border-radius: 5px;
 }
 
 .work .content {
@@ -354,20 +360,12 @@ table .col2 {
   margin-bottom: 30px;
 }
 
-.subsection-header {
-
-}
-
 .subsection-content {
   animation: fadein 1s;
 }
 
 .subsection-content .project-content, .subsection-content .project-details {
   font-size: 16px;
-}
-
-.skills {
-
 }
 
 .skills p {
@@ -405,6 +403,105 @@ table .col2 {
   transform: rotate(180deg);
 }
 /* END PORTFOLIO.HTML */
+
+/* BEGIN FOOD.HTML */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 1fr;
+  grid-gap: 15px;
+  margin-top: 30px;
+}
+
+.grid img {
+  align-items: center;
+  align-content: center;
+}
+
+.grid-img {
+  position: relative;
+}
+
+/* Adapted from: https://codemyui.com/3d-card-flip-hovering-text/ */
+
+.container{
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.front, .back{
+  background-size: cover;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);
+  background-position: center;
+  -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  text-align: center;
+  min-height: 300px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.back{
+  background: #feeca8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: -webkit-linear-gradient(45deg,  #feeca8 0%,#fbfbfb 100%);
+  background: -o-linear-gradient(45deg,  #feeca8 0%,#fbfbfb 100%);
+  background: linear-gradient(45deg,  #feeca8 0%,#fbfbfb 100%);
+}
+
+.inner{
+  -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+          transform: translateY(-50%) translateZ(60px) scale(0.94);
+  top: 50%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: 1px solid transparent;
+  -webkit-perspective: inherit;
+          perspective: inherit;
+  z-index: 2;
+}
+
+.container .back{
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+.container .front{
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+.container:hover .back{
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.container:hover .front{
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+/* END FOOD.HTML */
 
 /* mobile */
 @media (max-width: 600px) {
