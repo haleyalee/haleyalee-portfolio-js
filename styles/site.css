@@ -507,9 +507,53 @@ table .col2 {
 }
 /* END FOOD.HTML */
 
+/* BEGIN SELF-TAUGHT.HTML */
+.blog {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 850px;
+  margin: auto;
+  padding: 60px 0px;
+}
+
+.blog h2 {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+}
+
+.blog p {
+  margin-top: 0;
+  line-height: 25px;
+}
+
+.side {
+  /* position: absolute; */
+  width: 25%;
+  font-size: 1.3em;
+  /* margin-top: 60px; */
+  position: fixed;
+}
+
+.writing {
+  width: 75%;
+  padding: 0;
+  margin: 0;
+  margin-left: calc(25%);
+}
+
+
+/* END SELF-TAUGHT.HTML */
+
 /* mobile */
 @media (max-width: 600px) {
-
+  main {
+    width: 90%;
+    margin: auto;
+    /* margin-top: 60px;
+    margin-bottom: 60px; */
+  }
 }
 
 /* tablet */
