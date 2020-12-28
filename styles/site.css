@@ -565,17 +565,20 @@ table .col2 {
 /* mobile */
 @media (max-width: 600px) {
   main {
-    width: 85%;
+    width: 90%;
     margin: auto;
     margin-top: 60px;
     margin-bottom: 60px;
   }
 
-  #header {
+  header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    position: relative;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
   }
 
   #menu {
@@ -603,6 +606,8 @@ table .col2 {
     opacity: 0.95;
     z-index: 10;
     text-align: center;
+    align-content: center;
+    justify-content: center;
     animation: menu-fadein 0.5s;
   }
 
@@ -677,8 +682,13 @@ table .col2 {
     padding: 0px 5px;
   }
 
+  #projects .project-content {
+    font-size: 1.1em;
+  }
+
   #projects .project-details {
     margin-bottom: 50px;
+    font-size: 1.1em;
   }
 
   .button {
@@ -707,6 +717,7 @@ table .col2 {
   .grid {
     grid-template-columns: repeat(2, 50%);
     grid-auto-rows: 12%;
+    padding-bottom: 60px;
   }
 
   .grid img {
