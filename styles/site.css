@@ -21,6 +21,11 @@
   to   { opacity: 1}
 }
 
+@keyframes menu-fadein {
+  from { opacity: 0}
+  to   { opacity: 0.95}
+}
+
 @keyframes wave {
   /* Source: https://jarv.is/notes/css-waving-hand-emoji/ */
   0% { transform: rotate( 0.0deg) }
@@ -199,10 +204,20 @@ header {
   padding-bottom:1px;
 }
 
+#x {
+  display: none;
+}
+
+#overlay {
+  display: none;
+}
+
 /* END HEADER */
 
 /* BEGIN FOOTER */
 footer {
+  display: flex;
+  flex-direction: row;
   padding: 10px 40px;
   justify-content: space-between;
   align-items: center;
@@ -529,18 +544,19 @@ table .col2 {
 }
 
 .side {
-  /* position: absolute; */
-  width: 25%;
-  font-size: 1.3em;
-  /* margin-top: 60px; */
   position: fixed;
+  width: 20%;
+}
+
+.title {
+  font-size: 1.3em;
 }
 
 .writing {
-  width: 75%;
+  width: 80%;
   padding: 0;
   margin: 0;
-  margin-left: calc(25%);
+  margin-left: calc(20%);
 }
 
 
@@ -549,11 +565,174 @@ table .col2 {
 /* mobile */
 @media (max-width: 600px) {
   main {
-    width: 90%;
+    width: 85%;
     margin: auto;
-    /* margin-top: 60px;
-    margin-bottom: 60px; */
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
+
+  #header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  #x {
+    position: absolute;
+    display: inline-block;
+    font-size: 25px;
+    top: 0;
+    right: 30px;
+    text-shadow: 1px 1px #999;
+    z-index: 11;
+  }
+
+  #overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fdfdfd;
+    opacity: 0.95;
+    z-index: 10;
+    text-align: center;
+    animation: menu-fadein 0.5s;
+  }
+
+  #overlay ul {
+    padding-top: calc(50%);
+    font-size: 1.5em;
+    line-height: 2em;
+  }
+
+  #overlay li {
+    list-style: none;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #me {
+    padding-bottom: 60px;
+  }
+
+  #intro-text {
+    padding: 0;
+    margin: 0;
+  }
+
+  #intro-text h2 {
+    font-size: 40px;
+  }
+
+  #intro-text h3 {
+    font-size: 20px;
+  }
+
+  #intro-text table {
+    font-size: 20px;
+    line-height: 35px;
+  }
+
+  table td {
+    vertical-align: text-top;
+  }
+  
+  table .col2 {
+    padding-left: 15px;
+  }
+
+  .project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .project img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .project .content {
+    padding: 0px 5px;
+  }
+
+  #projects .project-details {
+    margin-bottom: 50px;
+  }
+
+  .button {
+    width: 33%;
+    text-align: center;
+  }
+
+  .work {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .work img {
+    width: 100%;
+    height: auto;
+  }
+
+  .work .src {
+    margin-bottom: 25px;
+  }
+
+  .work .content {
+    padding: 0px 5px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 50%);
+    grid-auto-rows: 12%;
+  }
+
+  .grid img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .front, .back {
+    min-height: 100%;
+  }
+
+  .blog {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #side {
+    width: 0%;
+    display: none;
+  }
+
+  .writing {
+    width: 85%;
+    margin: auto;
+  }
+
 }
 
 /* tablet */
