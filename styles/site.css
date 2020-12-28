@@ -613,8 +613,12 @@ table .col2 {
 
   #overlay ul {
     padding-top: calc(50%);
+    padding-left: 0;
     font-size: 1.5em;
     line-height: 2em;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
   }
 
   #overlay li {
