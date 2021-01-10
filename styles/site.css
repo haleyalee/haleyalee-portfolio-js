@@ -178,6 +178,10 @@ a {
   letter-spacing: 0.5px;
 }
 
+.hideme {
+  opacity: 0;
+}
+
 /* BEGIN HEADER */
 header {
   padding: 10px 40px;
