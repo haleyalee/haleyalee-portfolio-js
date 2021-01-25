@@ -596,7 +596,7 @@ table .col2 {
 /* BEGIN SELF-TAUGHT.HTML */
 .blog {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   position: relative;
   width: 850px;
   margin: auto;
@@ -633,6 +633,85 @@ table .col2 {
 
 /* END SELF-TAUGHT.HTML */
 
+
+/* BEGIN ROOMMATES.HTML */
+/* #cs-toc {
+  list-style: none;
+  padding: 0;
+  font-size: 0.8em;
+  font-family: 'Nunito-Light';
+} */
+
+#proj-blurb {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#proj-blurb div {
+  margin-right: 100px;
+}
+
+#rm-case-study .cs-section-title {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+#rm-case-study .cs-subsection-title {
+  font-size: 1.3em;
+  margin-bottom: 15px;
+}
+
+.section {
+  padding-bottom: 30px;
+}
+
+.sub-section {
+  padding-bottom: 15px;
+}
+
+.cs-img {
+  padding: 15px 0px;
+}
+
+.cs-img p {
+  font-style: italic;
+  color: #c4c4c4;
+}
+
+#market-research {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#market-research img {
+  margin-right: 40px;
+}
+
+.num {
+  color: #EEB11D; 
+  /* margin-right: 10px; */
+}
+
+.insight {
+  margin-bottom: 15px;
+}
+
+.insight ul{
+  line-height: 1.5em;
+}
+
+#features {
+  background-color: #fbfbfb;
+  padding: 20px;
+  margin-bottom: 15px;
+  /* color: #fdfdfd; */
+}
+/* END ROOMMATES.HTML */
+
 /* mobile */
 @media (max-width: 600px) {
   main {
@@ -664,6 +743,13 @@ table .col2 {
     right: 30px;
     text-shadow: 1px 1px #999;
     z-index: 11;
+
+    cursor: pointer;
+  }
+
+  #x:hover {
+    transform: scale(1.1);
+    transition-delay: 1s;
   }
 
   #overlay {
@@ -830,6 +916,25 @@ table .col2 {
   .writing {
     width: 85%;
     margin: auto;
+  }
+
+  #proj-blurb {
+    width: 85%;
+    margin: auto;
+    height: 50vh;
+  }
+
+  #proj-blurb h1 {
+    margin: 0;
+  }
+
+  #proj-blurb img {
+    height: 200px;
+    width: auto;
+  }
+
+  #proj-blurb div {
+    margin-right: 10px;
   }
 
 }
