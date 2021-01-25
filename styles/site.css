@@ -937,6 +937,17 @@ table .col2 {
     margin-right: 10px;
   }
 
+  #market-research {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  #market-research .cs-img {
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
 }
 
 /* tablet */
