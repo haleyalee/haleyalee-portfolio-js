@@ -2,6 +2,7 @@ $('#x').click(function(){
   if ($("#overlay").css('display') == 'block') {
     // console.log("display is block")
     // $("#overlay").css("display", "none");
+
     $("#overlay").fadeOut(500);
   }
   else {
